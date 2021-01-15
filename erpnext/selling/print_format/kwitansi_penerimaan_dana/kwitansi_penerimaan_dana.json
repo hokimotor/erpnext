@@ -1,0 +1,23 @@
+{
+ "align_labels_right": 0, 
+ "creation": "2019-05-09 09:20:15.585560", 
+ "custom_format": 1, 
+ "default_print_language": "en", 
+ "disabled": 1, 
+ "doc_type": "Employee", 
+ "docstatus": 0, 
+ "doctype": "Print Format", 
+ "font": "Default", 
+ "html": "<style>\n\t.print-format table, .print-format tr, \n\t.print-format td, .print-format div, .print-format p {\n\t\tfont-family: Monospace;\n\t\tline-height: 200%;\n\t\tvertical-align: middle;\n\t}\n\t@media screen {\n\t\t.print-format {\n\t\t\twidth: 4.5in;\n\t\t\tpadding: 0.25in;\n\t\t\tmin-height: 4in;\n\t\t}\n\t}\n</style>", 
+ "idx": 0, 
+ "line_breaks": 0, 
+ "modified": "2019-05-09 10:53:17.765605", 
+ "modified_by": "Administrator", 
+ "module": "Selling", 
+ "name": "Kwitansi Penerimaan Dana", 
+ "owner": "Administrator", 
+ "print_format_builder": 0, 
+ "print_format_type": "Server", 
+ "show_section_headings": 0, 
+ "standard": "Yes"
+}

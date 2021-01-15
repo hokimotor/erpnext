@@ -1,0 +1,107 @@
+{
+ "autoname": "format:{dari_nomor} - {sampai_nomor}",
+ "creation": "2019-08-26 10:01:04.690303",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "dari_nomor",
+  "sampai_nomor",
+  "column_break_4",
+  "dinonaktifkan",
+  "sb",
+  "total_jumlah",
+  "seri_faktur_pajak"
+ ],
+ "fields": [
+  {
+   "description": "Untuk mendapatkan nomor seri Faktur Pajak secara online, anda dapat menggunjungi <a>https://efaktur.pajak.go.id</a>\n",
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Format nomor seri yang valid: <b>###-##.########</b>",
+   "fieldname": "dari_nomor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Dari Nomor",
+   "length": 15,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "sampai_nomor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sampai Nomor",
+   "length": 15,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "dinonaktifkan",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Dinonaktifkan"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb",
+   "fieldtype": "Section Break",
+   "label": "Seri Faktur Pajak"
+  },
+  {
+   "fieldname": "total_jumlah",
+   "fieldtype": "Int",
+   "label": "Total Jumlah",
+   "read_only": 1
+  },
+  {
+   "fieldname": "seri_faktur_pajak",
+   "fieldtype": "Table",
+   "label": "Seri Faktur Pajak",
+   "options": "Seri Faktur Pajak",
+   "read_only": 1
+  }
+ ],
+ "modified": "2020-08-06 17:05:32.107860",
+ "modified_by": "Administrator",
+ "module": "eFaktur",
+ "name": "Penomoran Pajak",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

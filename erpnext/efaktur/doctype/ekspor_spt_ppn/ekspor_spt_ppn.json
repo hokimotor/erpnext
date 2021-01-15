@@ -1,0 +1,114 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2019-09-11 11:00:51.615620",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "tanggal_pajak_section",
+  "tanggal_awal",
+  "proses_transaksi",
+  "processed",
+  "column_break_4",
+  "tanggal_akhir",
+  "pajak_masukan_section",
+  "faktur_pajak_masukan",
+  "pajak_keluaran_section",
+  "faktur_pajak_keluaran"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tanggal_pajak_section",
+   "fieldtype": "Section Break",
+   "label": "Tanggal Pajak"
+  },
+  {
+   "fieldname": "tanggal_awal",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Awal",
+   "reqd": 1
+  },
+  {
+   "description": "Setelah proses transaksi selesai, simpan dokumen terlebih dahulu untuk download file CSV",
+   "fieldname": "proses_transaksi",
+   "fieldtype": "Button",
+   "label": "Proses Transaksi"
+  },
+  {
+   "default": "0",
+   "fieldname": "processed",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Processed"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tanggal_akhir",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Tanggal Akhir",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.processed == 1",
+   "fieldname": "pajak_masukan_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Pajak Masukan"
+  },
+  {
+   "fieldname": "faktur_pajak_masukan",
+   "fieldtype": "Table",
+   "label": "Faktur Pajak Masukan",
+   "options": "Ekspor SPT PPN Faktur"
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.processed == 1",
+   "fieldname": "pajak_keluaran_section",
+   "fieldtype": "Section Break",
+   "label": "Pajak Keluaran"
+  },
+  {
+   "fieldname": "faktur_pajak_keluaran",
+   "fieldtype": "Table",
+   "label": "Faktur Pajak Keluaran",
+   "options": "Ekspor SPT PPN Faktur"
+  }
+ ],
+ "modified": "2020-01-31 14:46:06.864978",
+ "modified_by": "Administrator",
+ "module": "eFaktur",
+ "name": "Ekspor SPT PPN",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

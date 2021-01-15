@@ -1,0 +1,87 @@
+{
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:template_name",
+ "creation": "2017-08-10 15:34:28.058054",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "template_name",
+  "term_type",
+  "section_break_3",
+  "terms"
+ ],
+ "fields": [
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "label": "Template Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "terms",
+   "fieldtype": "Table",
+   "label": "Payment Terms",
+   "options": "Payment Terms Template Detail",
+   "reqd": 1
+  },
+  {
+   "default": "Percentage",
+   "fieldname": "term_type",
+   "fieldtype": "Select",
+   "label": "Term Type",
+   "options": "Percentage\nFixed  Amount"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "modified": "2020-03-24 21:01:17.767442",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Payment Terms Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

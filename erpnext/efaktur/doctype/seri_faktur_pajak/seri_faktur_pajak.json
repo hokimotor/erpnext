@@ -1,0 +1,99 @@
+{
+ "autoname": "field:nomor_seri",
+ "creation": "2019-08-26 09:57:50.421315",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nomor_seri",
+  "terpakai",
+  "unlink",
+  "reference_section",
+  "voucher_type",
+  "voucher_no",
+  "lihat_faktur_pdf"
+ ],
+ "fields": [
+  {
+   "fieldname": "nomor_seri",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nomor Seri",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "terpakai",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Terpakai",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.terpakai == 1",
+   "fieldname": "unlink",
+   "fieldtype": "Button",
+   "label": "Unlink"
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "voucher_type",
+   "fieldtype": "Link",
+   "label": "Voucher Type",
+   "options": "DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "voucher_no",
+   "fieldtype": "Dynamic Link",
+   "label": "Voucher No",
+   "options": "voucher_type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lihat_faktur_pdf",
+   "fieldtype": "Button",
+   "label": "Lihat Faktur (PDF)"
+  }
+ ],
+ "in_create": 1,
+ "modified": "2020-04-14 22:01:46.552054",
+ "modified_by": "Administrator",
+ "module": "eFaktur",
+ "name": "Seri Faktur Pajak",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
